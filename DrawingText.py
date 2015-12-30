@@ -28,13 +28,13 @@ class Example(QWidget):
     def paintEvent(self, QPaintEvent):
         qp = QPainter()
         qp.begin(self)
-        self.drawText(event, qp)
+        self.drawText(QPaintEvent, qp)
         qp.end()
 
     def drawText(self, event, qp):
-        qp.setPen(Qcolor(168, 34, 3))
-        qp.setFont(QFont('Decorative', 10))
-        qp.drawText(event.rect(), qt.AlignCenter, self.text)
+        qp.setPen(QColor(168, 34, 3))
+        qp.setFont(QFont('Decorative', 10))经·
+        qp.drawText(event.rect(), Qt.AlignCenter, self.text)
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
